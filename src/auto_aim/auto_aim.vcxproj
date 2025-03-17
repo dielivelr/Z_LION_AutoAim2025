@@ -85,6 +85,7 @@
     <ClInclude Include="sample\debug.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\README.md" />
     <None Include="models\yolo.onnx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

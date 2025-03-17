@@ -292,5 +292,6 @@
     <None Include="models\yolo.onnx">
       <Filter>models</Filter>
     </None>
+    <None Include="..\..\README.md" />
   </ItemGroup>
 </Project>

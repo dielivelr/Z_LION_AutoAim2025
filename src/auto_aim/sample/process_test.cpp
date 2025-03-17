@@ -258,13 +258,6 @@ int main()
 			TimePredictor__,ShootTrackStrategy__,ShootMiddleStrategy__, HeroShootStrategy__, PrecisionShootStrategy__,
 			ShootTranslationStrategy__, ShootMiddleVagueStrategy__, StrategyPlanner__, delay_shooting_param,controler_state);
 
-	int recording_time = 20; 
-	std::string video_load_path = "C:\\Users\\16910\\VSProjects\\ruirui_love_V9\\videos";
-	int fps = 60; 
-	bool avi = false;
-	int whole_width = 720;
-	int whole_height = 540;
-
 	//主循环
 	while (1) {
 
@@ -282,7 +275,7 @@ int main()
 		///////////////////////////////////////////////
 
 		// 模拟转化
-		float car_yaw = -370.0;
+		float car_yaw = 0.0;
 		float car_pitch= -0.083;// 
 		float car_yaw_speed = 0.0;
 		int grade = 7;
@@ -297,7 +290,7 @@ int main()
 				send_armor.middle_four_points[3],
 			};
 
-			armor_pos.kind = send_armor.label;
+			armor_pos.kind = 3;//send_armor.label;
 			armor_pos.light_loss = send_armor.light_loss;
 			if (send_armor.label == 1) armor_pos.small_armor = false;
 			trans_armor_poses.push_back(armor_pos);
@@ -392,7 +385,7 @@ int main()
 		cv::putText(src, "shoot_model: " + shoot_model
 			, cv::Point(0, 400), 3, 1, Green, 3);
 
-		cv::resize(src, src, cv::Size(1080, 810));
+		//cv::resize(src, src, cv::Size(1080, 810));
 
 		cv::imshow("src", src);
 		cv::waitKey(1);

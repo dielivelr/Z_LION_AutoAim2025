@@ -66,8 +66,8 @@
       # 参考
       # q_vs: 0.03, 0.03,0.01,0.2, 0.2
       # r_vs: 0.1, 0.13, 1.3
-      trans_q_vs: [0.03, 0.03,0.01,0.2, 0.2]  # 观测矩阵 0.06, 0.06,0.06,0.55, 0.55
-      trans_r_vs: [0.1, 0.13, 1.3] # 测量矩阵 0.1, 0.02, 3.0
+      trans_q_vs: [0.03, 0.03,0.01,0.2, 0.2]  # 观测矩阵
+      trans_r_vs: [0.1, 0.13, 1.3] # 测量矩阵
 
     Processor:
       vxz_truncation_rotate_rpm: 80.0 # 转速过高截断值
@@ -87,8 +87,8 @@
       max_send_yaw_speed: 10000.0 # 传输的最大yaw_speed
       trans_control_compensation_left: 0.07 # 平移左转运动增强权值
       trans_control_compensation_right: 0.07 # 平移右转运动增强权值
-      rotate_control_compensation_left: 0.08 # 旋转左转运动增强权值 01
-      rotate_control_compensation_right: 0.08 # 旋转左转运动增强权值 04
+      rotate_control_compensation_left: 0.08 # 旋转左转运动增强权值
+      rotate_control_compensation_right: 0.08 # 旋转左转运动增强权值
 
     TimePredictor:
       shoot_delay:  0.0155 # 发弹延迟
@@ -108,12 +108,14 @@
       max_shoot_track_distance: 320.0 # 跟随模式允许最大射程
 
     Controler:
-      # 选择射击模式 0:默认模式
+      # 选择射击模式 
+      # 0:默认模式
       # 1:跟随模式 移动陀螺
       # 2:中心击打模式 移动陀螺
       # 3:精准击打模式 原地旋转
       # 4:平动击打模式 
       # 5:模糊击打模式
+      # 6:英雄射击模式
       shoot_state: 0
       delay_shooting_param: 0.5 # 新目标的射击延迟
 
@@ -138,7 +140,7 @@
     show_time_cost: false # 展示耗时
     open_origin_image_loader: false
     open_show_image_loader: true
-    load_video_root_path: "/home/rui/Projects/ZJ-Lion-AutoAim2025/src/auto_aim_debug/videos"
+    load_video_root_path: ""
     recording_time: -1.0 # 图像下载时长 -1表示无限时长
     avi: false  # true:avi格式 false:mp4格式
     image_width: 1440 # 图像宽
