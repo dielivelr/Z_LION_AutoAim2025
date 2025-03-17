@@ -1,0 +1,147 @@
+/hik_camera:
+  ros__parameters:
+    camera_name: narrow_stereo
+    exposure_time: 6000  # 相机曝光时间
+    gain: 32.0 # 增益
+
+/auto_aim_detector_node: # 识别节点
+  ros__parameters:
+    debug: true # 调试模式
+    use_fusion_detector: true # 使用融合识别
+    set_enemy_color: 0 # 设置敌方颜色 0: 不设置 1: 敌方为蓝色 2: 敌方为红色
+    show_time_cost: true # 是否显示耗时
+
+    Machine:
+      pic_min_threshold: 0.0 # 二值化参数
+
+    ArmorFinder: # 装甲板识别的二维尺寸限制
+      armor_min_height_ratio: 0.2
+      small_armor_min_aspect_ratio: 0.8
+      small_armor_max_aspect_ratio: 3.2
+      big_armor_min_aspect_ratio: 3.2
+      big_armor_max_aspect_ratio: 8.0
+      max_center_angle: 25.0
+
+    YoloModel:
+      yolo_model_path: ""  # 模型路径
+
+    NumberFinder:
+      number_model_path: "" # 模型路径
+
+/auto_aim_processor_node: # 解算节点
+  ros__parameters:
+    debug: true
+    Coordinate:
+      intrinsic: [2370.573108953692, 0.0, 711.1306749974372, 0.0, 2370.263325810751, 571.3160085742733,0.0, 0.0, 1.0] # 相机内参
+      distcoeffs: [-0.08590936981698154, 1.171532639048541, -0.001884908679011257, -0.0031928983215215, -5.942126178608666]  # 相机外参
+      shaft_differ_x: 0.0 # 绝对坐标系x方向偏移量
+      shaft_differ_y: -4.59 # 绝对坐标系y方向偏移量
+      shaft_differ_z: 12.282 # 绝对坐标系z方向偏移量
+
+      sot_shaft_differ_x: 0.0 # 转到射击坐标系偏移x
+      sot_shaft_differ_y: -4.66 # 转到射击坐标系偏移y
+      sot_shaft_differ_z: 12.371 # 转到射击坐标系偏移z
+      sot_shifting_yaw: -1.35 # 转到射击坐标系偏移yaw
+      sot_shifting_pitch: 0.4 # 转到射击坐标系偏移pitch
+      
+    DiagonalAngleSolver:
+      inclined: 0.392 # 倾斜性权重
+      pixel_error: 1.8 # 倾斜性权重
+      increase_param_blue: 1.2 # 蓝方朝向角增强参数
+      increase_param_red: 1.2 # 红方朝向角增强参数
+
+    TargetPlanner:
+      buffer_size: 30 # 缓冲值
+      # _kind_buffer_size_: 3 # 连续识别的缓冲值
+
+    CarState:
+      # 参考
+      # q_vs: 0.01, 0.01, 0.01, 0.02, 0.04, 0.04, 0.001, 0.1
+      # r_vs: 0.1, 0.13, 1.3, 0.2
+      q_vs: [0.01, 0.01, 0.01, 0.02, 0.04, 0.04, 0.001, 0.1]  # 观测矩阵
+      r_vs: [ 0.1, 0.13, 1.3, 0.2] # 测量矩阵
+      use_middle_car_state: false # 是否使用中心观测器
+
+    TranslationState:
+      # 参考
+      # q_vs: 0.03, 0.03,0.01,0.2, 0.2
+      # r_vs: 0.1, 0.13, 1.3
+      trans_q_vs: [0.03, 0.03,0.01,0.2, 0.2]  # 观测矩阵 0.06, 0.06,0.06,0.55, 0.55
+      trans_r_vs: [0.1, 0.13, 1.3] # 测量矩阵 0.1, 0.02, 3.0
+
+    Processor:
+      vxz_truncation_rotate_rpm: 80.0 # 转速过高截断值
+      max_detect_distance: 400.0 # 最远检测距离
+      
+    bullet_speed: 2330.0  # 弹速(cm/s)
+
+    PitchCompensator:
+      pitch_compensation_amplitude: 0.15 # pitch补偿增强权重
+
+    RangeSetter:
+      max_shoot_x: 6.75 # 射击坐标系下击打最小x尺寸
+      max_shoot_y: 7.5 # 射击坐标系下击打最小y尺寸
+      max_shoot_middle_x: 0.5 # 瞄准中心的射击坐标系下击打最小x尺寸
+      max_send_yaw: 16.0 # 传输的最大yaw
+      max_send_pitch: 4.0 # 传输的最大pitch
+      max_send_yaw_speed: 10000.0 # 传输的最大yaw_speed
+      trans_control_compensation_left: 0.07 # 平移左转运动增强权值
+      trans_control_compensation_right: 0.07 # 平移右转运动增强权值
+      rotate_control_compensation_left: 0.08 # 旋转左转运动增强权值 01
+      rotate_control_compensation_right: 0.08 # 旋转左转运动增强权值 04
+
+    TimePredictor:
+      shoot_delay:  0.0155 # 发弹延迟
+      serial_delay: 0.005 # 通讯延迟
+
+    ShootTrackStrategy:
+      switch_reverse_amplification_weight: 0.6 # 跟随击打的反向增幅参数
+      
+    HeroShootStrategy:
+      min_shoot_interval: 0.40 # 英雄射击模式下的击打间隔
+
+    StrategyPlanner:
+      min_shoot_track_rpm: 7.0 # 最小跟随击打rpm(否则采用完全随动)
+      min_shoot_middle_rpm: 60.0 # 最小瞄准中心rpm
+      min_shoot_precise_rpm: 90.0 # 最小精准击打rpm
+      min_shoot_track_distance: 100.0 # 跟随模式允许最小射程
+      max_shoot_track_distance: 320.0 # 跟随模式允许最大射程
+
+    Controler:
+      # 选择射击模式 0:默认模式
+      # 1:跟随模式 移动陀螺
+      # 2:中心击打模式 移动陀螺
+      # 3:精准击打模式 原地旋转
+      # 4:平动击打模式 
+      # 5:模糊击打模式
+      shoot_state: 0
+      delay_shooting_param: 0.5 # 新目标的射击延迟
+
+/serial_send_data_node: # 传输节点
+  ros__parameters:
+    debug: false # 调试模式
+    close_shoot: false # 关火
+    negation_send_yaw: true # 对send_yaw取反
+    negation_send_pitch: true # 对send_pitch取反
+
+/serial_read_data_node: # 接收节点
+  ros__parameters:
+    debug: false # 调试模式
+    negation_read_yaw: true # 对read_yaw取反
+    negation_read_pitch: true # 对read_pitch取反
+
+/auto_aim_debug_node: # 调试节点
+  ros__parameters:
+    show: false # 显示图像
+    show_detect: false # 仅展示detect层
+    show_process: true # 仅展示process层
+    show_time_cost: false # 展示耗时
+    open_origin_image_loader: false
+    open_show_image_loader: true
+    load_video_root_path: "/home/rui/Projects/ZJ-Lion-AutoAim2025/src/auto_aim_debug/videos"
+    recording_time: -1.0 # 图像下载时长 -1表示无限时长
+    avi: false  # true:avi格式 false:mp4格式
+    image_width: 1440 # 图像宽
+    image_height: 1080 # 图像高
+
+

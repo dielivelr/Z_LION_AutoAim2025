@@ -1,0 +1,10 @@
+float32 pitch
+float32 yaw
+float32 yaw_speed
+float32 shoot_time
+int32 move_state
+float32 rpm
+int32 ifget
+int32 enemy_kind
+int32 enemy_x
+int32 enemy_y
