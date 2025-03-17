@@ -81,7 +81,7 @@ int main()
 		double s = get_now_time();
 		std::vector<SendArmor> send_armors = Detector__->detect(src);
 		double e = get_now_time();
-		std::cout << "e - s" << e - s << std::endl;
+		std::cout << "cost time:" << e - s << std::endl;
 		for (const auto& send_armor : send_armors)
 		{
 

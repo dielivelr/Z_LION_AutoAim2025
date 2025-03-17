@@ -1,6 +1,6 @@
-//
+// Copyright (C) 2007 Free Software Foundation, Inc.
 // Created by xinyang on 2021/3/15.
-//
+// Copyright (C) 2025 Li Rui
 
 #ifndef _ADAPTIVE_EKF_HPP_
 #define _ADAPTIVE_EKF_HPP_

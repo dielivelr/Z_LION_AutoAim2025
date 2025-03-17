@@ -8,7 +8,6 @@
 #include"ShootStrategy/StrategyPlanner/StrategyPlanner.h"
 #include"TimePredictor/TimePredictor.h"
 #include"TransControler.h"
-// 这里未来需要优化,需要用到解算层的四点解算
 #include"../processor/CarSolver/CarSolver.h"
 #include"../processor/Coordinate/Coordinate.h"
 
@@ -33,6 +32,9 @@ namespace rm
 			canshoot,
 			move_state,
 			ifget,
+			enemy_kind,
+			enemy_x,
+			enemy_y,
 	*/
 	class Controler
 	{

@@ -8,10 +8,10 @@ namespace rm
 	public:
 		SendArmor(const Armor& armor) {
 			this->label = static_cast<int>(armor.label);
-			if(label > 2)
+			if (label > 2) // 联盟赛步兵只会出现3号装甲板
 			{
 				label = 3;
-			}
+			};
 			for (int i = 0; i < 4; i++) {
 				middle_four_points[i] = armor.middle_four_points[i];
 			};

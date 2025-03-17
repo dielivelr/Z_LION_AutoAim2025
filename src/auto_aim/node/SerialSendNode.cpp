@@ -1,25 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "auto_aim_interfaces/msg/serial_send_data.hpp" 
 #include "../controler/SerialModule/Serial.h"
-// #include <string>
-// #include <math.h>
-// #include <iostream>
-// #include <cmath>
-// #include <chrono>
-// #include <boost/asio.hpp>
-// #include <fcntl.h>
-// #include <termios.h>
-// #include <unistd.h>
-// #include <errno.h>
-// #include <stdlib.h>
-// #include <sys/time.h>
-// #include <time.h>
-// #include <stdio.h>
-// #include <unistd.h>
-// #include <sys/types.h>
-// #include <sys/stat.h>
-// #include <mutex>
-// #include <queue>
 using namespace rm;
 
 class SerialSendNode : public rclcpp::Node {

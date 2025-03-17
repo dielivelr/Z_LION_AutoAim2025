@@ -197,10 +197,10 @@ namespace rm
         std::vector<bbox_t> Out;
         for (const auto& x : bbox_ts) {
             if (
-                MIN(x.pts[0].x, x.pts[1].x) <= 50 ||
-                MIN(x.pts[0].y, x.pts[3].y) <= 50 ||
-                MAX(x.pts[2].x, x.pts[3].x) >= image_width - 50 ||
-                MAX(x.pts[2].y, x.pts[1].y) >= image_height - 50
+                MIN(x.pts[0].x, x.pts[1].x) <= 20 ||
+                MIN(x.pts[0].y, x.pts[3].y) <= 20 ||
+                MAX(x.pts[2].x, x.pts[3].x) >= image_width - 20 ||
+                MAX(x.pts[2].y, x.pts[1].y) >= image_height - 20
                 ) continue;
             Out.push_back(x);
         }

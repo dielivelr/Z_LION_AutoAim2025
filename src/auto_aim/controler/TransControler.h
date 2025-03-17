@@ -19,7 +19,7 @@ namespace rm
 		double yaw_speed;
 		float shoot_time;	// 通讯转化为canshoot
 		int move_state;		// 切换装甲板时取2,其余情况取1
-		int ifget;			// 一旦车需要受到自瞄控制,ifget = 1
+		int ifget;			// 一旦车需要受到自瞄控制, ifget = 1
 		float rpm = 0;			// rpm转速
 		int enemy_kind = 0;		// 敌方类型
 		int enemy_x = 0;		

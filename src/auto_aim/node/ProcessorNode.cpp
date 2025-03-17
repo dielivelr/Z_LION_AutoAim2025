@@ -187,11 +187,6 @@ public:
         };
         ShootTrackStrategy__ = new ShootTrackStrategy(
             ignore_min_shoot_x,switch_reverse_amplification_weight,track_face_angle_func,RangeSetter__);
-        
-        // float static_track_face_angle = declare_parameter("AutoTrackStrategy.static_track_face_angle", 30.0);
-        // float max_shoot_x_ratio = declare_parameter("AutoTrackStrategy.max_shoot_x_ratio", 1.0);
-        // ShootTrackStrategy__ = new AutoTrackStrategy(RangeSetter__,
-        //     static_track_face_angle, switch_reverse_amplification_weight, max_shoot_x_ratio);
 
 		// ShootMiddleStrategy
 		ShootMiddleStrategy__ = new ShootMiddleStrategy(RangeSetter__);

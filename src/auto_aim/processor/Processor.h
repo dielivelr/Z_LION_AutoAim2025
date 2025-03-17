@@ -78,32 +78,6 @@ namespace rm
 		std::vector<Eigen::VectorXf> run_solve_car_strategy(CarSolver::Operation operation, const std::vector<ArmorPos>& armor_poses,
 			float new_d_t, const float& car_yaw);
 	};
-
-	class EkfProcessor : public ProcessorBase
-	{
-		TranslationStateBase* TranslationState__;
-		std::unique_ptr<ExtendedKalmanFilter> tracker__;
-	public:
-		EkfProcessor() = default;
-		EkfProcessor(TranslationStateBase* TranslationState__,ArmorSolver* ArmorSolver__, TargetPlanner* TargetPlanner__,
-			const std::vector<double>& q_vs, const std::vector<double>& r_vs, float vxz_truncation_rotate_rpm, float max_detect_distance);
-	private:
-		std::vector<Eigen::VectorXf> init(const std::vector<ArmorPos>& armor_poses,
-			float new_d_t, const float& car_yaw, float init_new_rotate_speed) override;
-
-		std::vector<Eigen::VectorXf> update(const std::vector<ArmorPos>& armor_poses,
-			float new_d_t, const float& car_yaw) override;
-
-		TransProcessor data_to_transprocessor(const std::vector<Eigen::VectorXf>& States, int target_kind) override;
-	private:
-		bool angle_jump(float face_yaw);
-	private:
-		Eigen::VectorXf get_last_state() const;
-		Eigen::VectorXf target_state;
-		float d_t;
-		float last_r, last_z;
-		float last_yaw;
-	};
 }
 
 

@@ -20,9 +20,7 @@ namespace rm
 		//	negative = 0,
 		//	one,
 		//	sentinel,
-		//	three,
-		//	four,
-		//	five
+		//	three
 		int target_kind = 0;
 	public:
 		// 获取目标类型
