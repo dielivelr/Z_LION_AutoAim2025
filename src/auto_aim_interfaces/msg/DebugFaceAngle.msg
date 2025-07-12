@@ -1,0 +1,2 @@
+Point2f point
+float32 cam_face_angle

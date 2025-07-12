@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>auto_aim_publisher</name>
+  <version>0.0.0</version>
+  <description>ROS 2 publisher node for serial read data</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tool dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <!-- Build dependencies -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>auto_aim_interfaces</build_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+
+  <!-- Execution dependencies -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>auto_aim_interfaces</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <depend>std_msgs</depend>
+
+  <!-- Test dependencies (optional) -->
+  <!-- <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend> -->
+
+  <!-- Export dependencies -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

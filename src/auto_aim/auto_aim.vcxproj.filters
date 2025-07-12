@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="detector">
+      <UniqueIdentifier>{c4b76035-f8fa-4028-b2f3-d1e47ef431c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sample">
+      <UniqueIdentifier>{e30c6acc-428b-477e-81d8-030906f896f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\Armor">
+      <UniqueIdentifier>{2385eba8-b519-4d04-9be2-94dd0dccc23b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\ArmorFinder">
+      <UniqueIdentifier>{36bc779f-3bd3-417b-9028-a30dfedfdb06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\Light">
+      <UniqueIdentifier>{cff690a0-b965-4244-ae79-5d253315f5d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\LightFinder">
+      <UniqueIdentifier>{d4dbe1fa-2b52-4eb9-bd29-7c4264ccc42f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\Machine">
+      <UniqueIdentifier>{3063c51a-d6ba-4883-8023-e24df89a0179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\NumberFinder">
+      <UniqueIdentifier>{5b05a9e1-5140-40a1-953c-0c9eba80121e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\Video">
+      <UniqueIdentifier>{b7f59c43-24f9-4ad9-8eef-d039dfc64ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detector\YoloModel">
+      <UniqueIdentifier>{020dc165-c2f6-4251-96a4-2030f8c3d5d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor">
+      <UniqueIdentifier>{768cabb9-0ea5-45b0-961f-f5ac023d419c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\ArmorPos">
+      <UniqueIdentifier>{11adfa84-452a-4f0d-ad07-22d3a6636a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\ArmorSolver">
+      <UniqueIdentifier>{362bcb30-4c2e-4ae6-b111-ed0e36e1e6e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\ArmorSolver\FaceAngleSolver">
+      <UniqueIdentifier>{3085381b-7fa7-4363-9764-fa8930d29cf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\CarSolver">
+      <UniqueIdentifier>{2c21f307-e869-479b-9b43-313656488299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\CarSolver\CarState">
+      <UniqueIdentifier>{0feac6da-04d4-448b-a099-6d3d31570cd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\CarSolver\DataObserver">
+      <UniqueIdentifier>{8272d47b-95a0-4d5a-b881-4f7407fb4b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\CarSolver\Ekf">
+      <UniqueIdentifier>{aa017062-5a32-46c7-8402-21400a441a87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\CarSolver\TranslationState">
+      <UniqueIdentifier>{74c15cae-d9b1-4c09-b73f-cd5bfeb7c344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\Coordinate">
+      <UniqueIdentifier>{704dcb3a-ef21-4b86-b985-92220a0caf56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="processor\TargetPlanner">
+      <UniqueIdentifier>{1721f583-3f1b-49dd-999a-fa43d04b3077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controler">
+      <UniqueIdentifier>{7d497588-feea-4658-a68d-75baf2c38be7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controler\PitchCompensator">
+      <UniqueIdentifier>{6941bca4-78e4-48ab-a452-0de357c3bd3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controler\RangeSetter">
+      <UniqueIdentifier>{80b71046-a37a-4f1e-a879-12d0e201b4cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controler\TimePredictor">
+      <UniqueIdentifier>{4a1ecba1-c421-4ef9-86e9-66c1470093a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controler\ShootStrategy">
+      <UniqueIdentifier>{bc6331c9-a00e-49b1-8333-fff674aa18fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controler\ShootStrategy\StrategyPlanner">
+      <UniqueIdentifier>{c4ad16ce-3597-4eb1-b116-99ca5b213493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tool">
+      <UniqueIdentifier>{769cfd5c-2767-4de4-857c-bb24f456ad51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tool\Color">
+      <UniqueIdentifier>{e6b2f944-818e-40e3-a1ef-9524b9604803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tool\Tools">
+      <UniqueIdentifier>{1b73ad1f-cdf5-4020-83af-032dc7876b20}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sample\debug.h">
+      <Filter>sample</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\Armor\Armor.h">
+      <Filter>detector\Armor</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\ArmorFinder\ArmorFinder.h">
+      <Filter>detector\ArmorFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\Light\Light.h">
+      <Filter>detector\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\LightFinder\LightFinder.h">
+      <Filter>detector\LightFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\Machine\Machine.h">
+      <Filter>detector\Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\YoloModel\YoloModel.h">
+      <Filter>detector\YoloModel</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\Video\Video.h">
+      <Filter>detector\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\NumberFinder\NumberFinder.h">
+      <Filter>detector\NumberFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\Detector.h">
+      <Filter>detector</Filter>
+    </ClInclude>
+    <ClInclude Include="detector\TransDetector.h">
+      <Filter>detector</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\Processor.h">
+      <Filter>processor</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\TransProcessor.h">
+      <Filter>processor</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\ArmorSolver\ArmorSolver.h">
+      <Filter>processor\ArmorSolver</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\ArmorSolver\FaceAngleSolver\FaceAngleSolver.h">
+      <Filter>processor\ArmorSolver\FaceAngleSolver</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\CarSolver\CarState\CarState.h">
+      <Filter>processor\CarSolver\CarState</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\CarSolver\DataObserver\DataObserver.h">
+      <Filter>processor\CarSolver\DataObserver</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\CarSolver\Ekf\Ekf.h">
+      <Filter>processor\CarSolver\Ekf</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\CarSolver\TranslationState\TranslationState.h">
+      <Filter>processor\CarSolver\TranslationState</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\CarSolver\CarSolver.h">
+      <Filter>processor\CarSolver</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\ArmorPos\ArmorPos.h">
+      <Filter>processor\ArmorPos</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\Coordinate\Coordinate.h">
+      <Filter>processor\Coordinate</Filter>
+    </ClInclude>
+    <ClInclude Include="processor\TargetPlanner\TargetPlanner.h">
+      <Filter>processor\TargetPlanner</Filter>
+    </ClInclude>
+    <ClInclude Include="controler\PitchCompensator\PitchCompensator.h">
+      <Filter>controler\PitchCompensator</Filter>
+    </ClInclude>
+    <ClInclude Include="controler\RangeSetter\RangeSetter.h">
+      <Filter>controler\RangeSetter</Filter>
+    </ClInclude>
+    <ClInclude Include="controler\TimePredictor\TimePredictor.h">
+      <Filter>controler\TimePredictor</Filter>
+    </ClInclude>
+    <ClInclude Include="controler\ShootStrategy\StrategyPlanner\StrategyPlanner.h">
+      <Filter>controler\ShootStrategy\StrategyPlanner</Filter>
+    </ClInclude>
+    <ClInclude Include="controler\ShootStrategy\ShootStrategy.h">
+      <Filter>controler\ShootStrategy</Filter>
+    </ClInclude>
+    <ClInclude Include="controler\Controler.h">
+      <Filter>controler</Filter>
+    </ClInclude>
+    <ClInclude Include="controler\TransControler.h">
+      <Filter>controler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\auto_aim_debug\src\Color\Color.h">
+      <Filter>tool\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\auto_aim_debug\src\Tools\Tools.h">
+      <Filter>tool\Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sample\detect_test.cpp">
+      <Filter>sample</Filter>
+    </ClCompile>
+    <ClCompile Include="sample\process_test.cpp">
+      <Filter>sample</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\Armor\Armor.cpp">
+      <Filter>detector\Armor</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\ArmorFinder\ArmorFinder.cpp">
+      <Filter>detector\ArmorFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\Light\Light.cpp">
+      <Filter>detector\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\LightFinder\LightFinder.cpp">
+      <Filter>detector\LightFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\Machine\Machine.cpp">
+      <Filter>detector\Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\YoloModel\YoloModel.cpp">
+      <Filter>detector\YoloModel</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\Video\Video.cpp">
+      <Filter>detector\Video</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\NumberFinder\NumberFinder.cpp">
+      <Filter>detector\NumberFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="detector\Detector.cpp">
+      <Filter>detector</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\Processor.cpp">
+      <Filter>processor</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\ArmorSolver\ArmorSolver.cpp">
+      <Filter>processor\ArmorSolver</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\ArmorSolver\FaceAngleSolver\FaceAngleSolver.cpp">
+      <Filter>processor\ArmorSolver\FaceAngleSolver</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\CarSolver\CarState\CarState.cpp">
+      <Filter>processor\CarSolver\CarState</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\CarSolver\DataObserver\DataObserver.cpp">
+      <Filter>processor\CarSolver\DataObserver</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\CarSolver\Ekf\Ekf.cpp">
+      <Filter>processor\CarSolver\Ekf</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\CarSolver\TranslationState\TranslationState.cpp">
+      <Filter>processor\CarSolver\TranslationState</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\CarSolver\CarSolver.cpp">
+      <Filter>processor\CarSolver</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\Coordinate\Coordinate.cpp">
+      <Filter>processor\Coordinate</Filter>
+    </ClCompile>
+    <ClCompile Include="processor\TargetPlanner\TargetPlanner.cpp">
+      <Filter>processor\TargetPlanner</Filter>
+    </ClCompile>
+    <ClCompile Include="controler\PitchCompensator\PitchCompensator.cpp">
+      <Filter>controler\PitchCompensator</Filter>
+    </ClCompile>
+    <ClCompile Include="controler\RangeSetter\RangeSetter.cpp">
+      <Filter>controler\RangeSetter</Filter>
+    </ClCompile>
+    <ClCompile Include="controler\TimePredictor\TimePredictor.cpp">
+      <Filter>controler\TimePredictor</Filter>
+    </ClCompile>
+    <ClCompile Include="controler\ShootStrategy\StrategyPlanner\StrategyPlanner.cpp">
+      <Filter>controler\ShootStrategy\StrategyPlanner</Filter>
+    </ClCompile>
+    <ClCompile Include="controler\ShootStrategy\ShootStrategy.cpp">
+      <Filter>controler\ShootStrategy</Filter>
+    </ClCompile>
+    <ClCompile Include="controler\Controler.cpp">
+      <Filter>controler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\auto_aim_debug\src\Tools\Tools.cpp">
+      <Filter>tool\Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

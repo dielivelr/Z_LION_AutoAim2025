@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a676ef40-861f-464e-acbb-279791315b61}</ProjectGuid>
+    <RootNamespace>autoaim</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\include\eigen-3.2.5\eigen-3.2.5;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include;C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include\ie;C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include\ngraph;C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include\openvino;C:\include\Opencv\opencv\build\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\lib\intel64\Release;C:\include\Opencv\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\include\eigen-3.2.5\eigen-3.2.5;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include;C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include\ie;C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include\ngraph;C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\include\openvino;C:\include\Opencv\opencv\build\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>C:\include\Openvino\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\w_openvino_toolkit_windows_2023.0.1.11005.fa1c41994f3_x86_64\runtime\lib\intel64\Release;C:\include\Opencv\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world460.lib;libprotobuf-lite.lib;openvino.lib;openvino_c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world460.lib;libprotobuf-lite.lib;openvino.lib;openvino_c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\auto_aim_debug\src\Color\Color.h" />
+    <ClInclude Include="..\auto_aim_debug\src\Tools\Tools.h" />
+    <ClInclude Include="controler\Controler.h" />
+    <ClInclude Include="controler\PitchCompensator\PitchCompensator.h" />
+    <ClInclude Include="controler\RangeSetter\RangeSetter.h" />
+    <ClInclude Include="controler\ShootStrategy\ShootStrategy.h" />
+    <ClInclude Include="controler\ShootStrategy\StrategyPlanner\StrategyPlanner.h" />
+    <ClInclude Include="controler\TimePredictor\TimePredictor.h" />
+    <ClInclude Include="controler\TransControler.h" />
+    <ClInclude Include="detector\ArmorFinder\ArmorFinder.h" />
+    <ClInclude Include="detector\Armor\Armor.h" />
+    <ClInclude Include="detector\Detector.h" />
+    <ClInclude Include="detector\LightFinder\LightFinder.h" />
+    <ClInclude Include="detector\Light\Light.h" />
+    <ClInclude Include="detector\Machine\Machine.h" />
+    <ClInclude Include="detector\NumberFinder\NumberFinder.h" />
+    <ClInclude Include="detector\TransDetector.h" />
+    <ClInclude Include="detector\Video\Video.h" />
+    <ClInclude Include="detector\YoloModel\YoloModel.h" />
+    <ClInclude Include="processor\ArmorPos\ArmorPos.h" />
+    <ClInclude Include="processor\ArmorSolver\ArmorSolver.h" />
+    <ClInclude Include="processor\ArmorSolver\FaceAngleSolver\FaceAngleSolver.h" />
+    <ClInclude Include="processor\CarSolver\CarSolver.h" />
+    <ClInclude Include="processor\CarSolver\CarState\CarState.h" />
+    <ClInclude Include="processor\CarSolver\DataObserver\DataObserver.h" />
+    <ClInclude Include="processor\CarSolver\Ekf\Ekf.h" />
+    <ClInclude Include="processor\CarSolver\TranslationState\TranslationState.h" />
+    <ClInclude Include="processor\Coordinate\Coordinate.h" />
+    <ClInclude Include="processor\Processor.h" />
+    <ClInclude Include="processor\TargetPlanner\TargetPlanner.h" />
+    <ClInclude Include="processor\TransProcessor.h" />
+    <ClInclude Include="sample\debug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\auto_aim_debug\src\Tools\Tools.cpp" />
+    <ClCompile Include="controler\Controler.cpp" />
+    <ClCompile Include="controler\PitchCompensator\PitchCompensator.cpp" />
+    <ClCompile Include="controler\RangeSetter\RangeSetter.cpp" />
+    <ClCompile Include="controler\ShootStrategy\ShootStrategy.cpp" />
+    <ClCompile Include="controler\ShootStrategy\StrategyPlanner\StrategyPlanner.cpp" />
+    <ClCompile Include="controler\TimePredictor\TimePredictor.cpp" />
+    <ClCompile Include="detector\ArmorFinder\ArmorFinder.cpp" />
+    <ClCompile Include="detector\Armor\Armor.cpp" />
+    <ClCompile Include="detector\Detector.cpp" />
+    <ClCompile Include="detector\LightFinder\LightFinder.cpp" />
+    <ClCompile Include="detector\Light\Light.cpp" />
+    <ClCompile Include="detector\Machine\Machine.cpp" />
+    <ClCompile Include="detector\NumberFinder\NumberFinder.cpp" />
+    <ClCompile Include="detector\Video\Video.cpp" />
+    <ClCompile Include="detector\YoloModel\YoloModel.cpp" />
+    <ClCompile Include="processor\ArmorSolver\ArmorSolver.cpp" />
+    <ClCompile Include="processor\ArmorSolver\FaceAngleSolver\FaceAngleSolver.cpp" />
+    <ClCompile Include="processor\CarSolver\CarSolver.cpp" />
+    <ClCompile Include="processor\CarSolver\CarState\CarState.cpp" />
+    <ClCompile Include="processor\CarSolver\DataObserver\DataObserver.cpp" />
+    <ClCompile Include="processor\CarSolver\Ekf\Ekf.cpp" />
+    <ClCompile Include="processor\CarSolver\TranslationState\TranslationState.cpp" />
+    <ClCompile Include="processor\Coordinate\Coordinate.cpp" />
+    <ClCompile Include="processor\Processor.cpp" />
+    <ClCompile Include="processor\TargetPlanner\TargetPlanner.cpp" />
+    <ClCompile Include="sample\detect_test.cpp" />
+    <ClCompile Include="sample\process_test.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
